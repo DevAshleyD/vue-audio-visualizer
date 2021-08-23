@@ -1,0 +1,89 @@
+{
+    "name": "vue-audio-visual",
+    "version": "2.3.0",
+    "description": "Vue audio visualization components",
+    "author": "Stas Kobzar <staskobzar@gmail.com>",
+    "private": false,
+    "scripts": {
+        "codecov": "codecov",
+        "lint": "vue-cli-service lint",
+        "build": "vue-cli-service build --target lib src/plugin.js  -t f0d3221e-ebf9-482e-938a-db04b1fdbc4e",
+        "test": "vue-cli-service test:unit --coverage"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "core-js": "^3.7.0",
+        "vue": "^2.6.12"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^4.5.13",
+        "@vue/cli-plugin-eslint": "^3.1.1",
+        "@vue/cli-plugin-unit-jest": "^4.5.13",
+        "@vue/cli-service": "^4.5.13",
+        "@vue/eslint-config-standard": "^4.0.0",
+        "@vue/test-utils": "1.0.0-beta.29",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^5.16.0",
+        "eslint-plugin-vue": "^5.0.0",
+        "jest-canvas-mock": "^2.3.0",
+        "vue-template-compiler": "^2.6.12"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "@vue/standard"
+        ],
+        "rules": {},
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "overrides": [
+            {
+                "files": [
+                    "**/__tests__/*.{j,t}s?(x)",
+                    "**/tests/unit/**/*.spec.{j,t}s?(x)"
+                ],
+                "env": {
+                    "jest": true
+                }
+            }
+        ]
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ],
+    "main": "src/plugin.js",
+    "jest": {
+        "preset": "@vue/cli-plugin-unit-jest",
+        "moduleNameMapper": {
+            "^@/(.*)$": "<rootDir>/src/$1",
+            "Plugin": "<rootDir>/src/plugin"
+        },
+        "setupFiles": [
+            "<rootDir>/tests/unit/setup.js",
+            "<rootDir>/tests/unit/mock.js"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/staskobzar/vue-audio-visual.git"
+    },
+    "keywords": [
+        "vue",
+        "audio",
+        "http5-audio-api",
+        "http5-audio-visualizer",
+        "canvas"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/staskobzar/vue-audio-visual/issues"
+    },
+    "homepage": "https://github.com/staskobzar/vue-audio-visual#readme"
+}
